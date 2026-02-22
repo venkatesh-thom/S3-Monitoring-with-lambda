@@ -72,7 +72,7 @@ variable "alert_email" {
   description = "Email address for receiving CloudWatch alerts"
   type        = string
   default     = ""
-  
+
   validation {
     condition     = can(regex("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", var.alert_email)) || var.alert_email == ""
     error_message = "Must be a valid email address or empty string."
@@ -122,7 +122,7 @@ variable "throttle_threshold" {
 variable "concurrent_executions_threshold" {
   description = "Concurrent executions threshold for performance warning"
   type        = number
-  default     = 50
+  default     = 5
 }
 
 variable "log_error_threshold" {
