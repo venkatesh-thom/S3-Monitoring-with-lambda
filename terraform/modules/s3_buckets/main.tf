@@ -5,7 +5,8 @@
 
 # S3 Bucket for uploading original images (SOURCE)
 resource "aws_s3_bucket" "upload_bucket" {
-  bucket = var.upload_bucket_name
+  bucket        = var.upload_bucket_name
+  force_destroy = true
 
   tags = merge(
     var.tags,
@@ -46,7 +47,8 @@ resource "aws_s3_bucket_public_access_block" "upload_bucket" {
 
 # S3 Bucket for processed images (DESTINATION)
 resource "aws_s3_bucket" "processed_bucket" {
-  bucket = var.processed_bucket_name
+  bucket        = var.processed_bucket_name
+  force_destroy = true
 
   tags = merge(
     var.tags,
