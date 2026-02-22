@@ -12,10 +12,10 @@ project_name = "image-processor"
 
 # Lambda Configuration
 lambda_runtime     = "python3.12"
-lambda_timeout     = 60      # seconds
-lambda_memory_size = 1024    # MB
-log_level          = "INFO"  # DEBUG, INFO, WARNING, ERROR
-log_retention_days = 7       # days
+lambda_timeout     = 60     # seconds
+lambda_memory_size = 1024   # MB
+log_level          = "INFO" # DEBUG, INFO, WARNING, ERROR
+log_retention_days = 7      # days
 
 # S3 Configuration
 enable_s3_versioning = true
@@ -52,7 +52,7 @@ duration_threshold_ms = 45000
 throttle_threshold = 5
 
 # Concurrent Executions: Alert when concurrent executions exceed this
-concurrent_executions_threshold = 50
+concurrent_executions_threshold = 2
 
 # Log Error Threshold: Alert after this many ERROR logs detected
 log_error_threshold = 1
