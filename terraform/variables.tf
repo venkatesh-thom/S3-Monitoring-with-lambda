@@ -122,7 +122,7 @@ variable "throttle_threshold" {
 variable "concurrent_executions_threshold" {
   description = "Concurrent executions threshold for performance warning"
   type        = number
-  default     = 5
+  default     = 2
 }
 
 variable "log_error_threshold" {
